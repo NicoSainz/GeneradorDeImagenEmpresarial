@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/mision_vision', function () {
+    return view('mision_vision');
+});
