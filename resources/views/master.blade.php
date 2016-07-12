@@ -30,9 +30,10 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ayuda <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Ayuda</a></li>
+              <li><a href="#">Salir</a></li>
              <li role="separator" class="divider"></li>
             </ul>
           </li>

@@ -19,3 +19,13 @@ Route::get('/', function () {
 Route::get('/mision_vision', function () {
     return view('mision_vision');
 });
+
+Route::get('/datosGenerales', function () {
+    return view('datos_generales');
+});
+Route::get('/descripcion', function () {
+    return view('descripcion');
+});
+Route::get('/productos', function () {
+    return view('productos');
+});
