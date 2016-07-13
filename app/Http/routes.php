@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/iniciarSesion', function () {
+    return view('iniciarSesion');
 });
 
 
