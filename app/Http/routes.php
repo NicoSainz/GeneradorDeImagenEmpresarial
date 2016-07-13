@@ -11,8 +11,13 @@
 |
 */
 
+
 Route::get('/iniciarSesion', function () {
     return view('iniciarSesion');
+    
+Route::get('/', function () {
+    return view('principal');
+
 });
 
 
