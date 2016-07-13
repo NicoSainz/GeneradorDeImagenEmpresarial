@@ -4,6 +4,9 @@
 @stop
 
 @section('contenido')
+<div class="progress progress-striped active">
+	<div class="progress-bar" style="width: 20%">Paso: Datos Generales</div>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 well">
@@ -43,12 +46,12 @@
 			        <input type="text" class="form-control" id="telefono" placeholder="Tel">
 			      </div>
 			    </div>
-			    <div class="form-group">
-			      <div class="col-lg-10 col-lg-offset-2">
-			        <button type="reset" class="btn btn-default">Cancel</button>
-			        <button type="submit" class="btn btn-primary">Next</button>
-			      </div>
-			    </div>
+	
+			    <ul class="pager">
+			  		
+		            <li><a href="#" class="btn btn-primary">Guardar</a></li>
+			  		<li><a href="{{url('/mision_vision')}}">Siguiente</a></li>
+				</ul>
 			  </fieldset>
 			</form>
 		</div>

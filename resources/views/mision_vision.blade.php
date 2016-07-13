@@ -6,7 +6,7 @@
 
 @section('contenido')
 <div class="progress progress-striped active">
-	<div class="progress-bar" style="width: 30%">Paso: Misión/Visión</div>
+	<div class="progress-bar" style="width: 40%">Paso: Misión/Visión</div>
 </div>
 <form class="form-horizontal">
   	<fieldset>
@@ -25,18 +25,25 @@
       		</div>
     	</div>
     	<div class="form-group">
+            
 			<form action="index.php" method="POST" enctype="multipart/form-data"/>
-				<label for="logo" class="col-lg-2 control-label">Logo</label>
-				<div class="col-lg-10">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1">
+				    <label for="logo" class="col-lg-2 control-label">Logo</label>
+                </div>
+				<div class="col-lg-4">
     				<input name="archivo" id="archivo" type="file"/>
-    				<br>
-					<input class="btn btn-primary btn-sm" type="submit" name="subir" value="Subir imagen">
+                </div>
+    			<div class="col-lg-4">
+					<input type="submit" name="subir" value="Subir imagen">
 				</div>
 			</form>
 		</div>
+        
 		<ul class="pager">
-	  		<li><a href="#">Anterior</a></li>
-	  		<li><a href="#">Siguiente</a></li>
+	  		<li><a href="{{url('/datosGenerales')}}">Anterior</a></li>
+            <li><a href="#" class="btn btn-primary">Guardar</a></li>
+	  		<li><a href="{{url('/productos')}}">Siguiente</a></li>
 		</ul>
 	</fieldset>
 </form>

@@ -23,10 +23,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Datos Generales</a></li>
+          <li><a href="{{url('/datosGenerales')}}">Datos Generales</a></li>
           <li><a href="{{url('/mision_vision')}}">Misión/Vision</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Descripción</a></li>
+          <li><a href="{{url('/productos')}}">Productos</a></li>
+          <li><a href="{{url('/descripcion')}}">Descripción</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
