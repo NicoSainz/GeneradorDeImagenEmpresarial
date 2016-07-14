@@ -4,6 +4,7 @@
 @stop
 
 @section('contenido')
+<h3>Cliente : {{$clientes->nombre}}</h3> <h4>ID :{{$clientes->id}}</h2>
 <div class="progress progress-striped active">
 	<div class="progress-bar" style="width: 20%">Paso: Datos Generales</div>
 </div>

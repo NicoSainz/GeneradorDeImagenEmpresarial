@@ -21,32 +21,19 @@
                <div style="position:absolute; left:135px; top:10px; width:728px; height:70px ">       
                <img src="img/logo1.jpg" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS">
                 </div>
-
-
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href=""></a>
+                    <li class="page-scroll">
+                        <a class="btn btn-danger" href="{{url('/clientes')}}">Listado de Clientes</a>
                     </li>
-                    
-
-
-                  
-
-                    
-                    
-
-                      
-
                     <li class="page-scroll">
                         <a href="">Registrate</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="">Iniciar Sesion</a>
+                        <a href="{{url('/iniciarSesion')}}">Iniciar Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -57,9 +44,13 @@
 
 
  
-
-				@yield('encabezado')
-				<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+        @yield('encabezado')
+        </div>
+    </div>
+</div>				<hr>
 				@yield('contenido')
 
 	<script src="{{ asset("js/bootstrap.js")}}"></script>

@@ -12,22 +12,22 @@
 */
 
 
-Route::get('/iniciarSesion', function () {
-    return view('iniciarSesion');
-    
+Route::get('/iniciarSesion', function () {return view('iniciarSesion');});
+Route::get('/clientes', 'controllerEmpresarial@mostrarClientes');
+
+Route::get('/datosGenerales/{id}', 'controllerEmpresarial@editarDatos');
+Route::post('/actualizarDatos/{id}', 'e1controller@actualizarDatos');
+
+
+
+
 Route::get('/', function () {
     return view('principal');
-
 });
 
+Route::get('/mision_vision', function () {return view('mision_vision');});
 
-Route::get('/mision_vision', function () {
-    return view('mision_vision');
-});
 
-Route::get('/datosGenerales', function () {
-    return view('datos_generales');
-});
 Route::get('/descripcion', function () {
     return view('descripcion');
 });

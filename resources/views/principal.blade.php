@@ -34,6 +34,7 @@
                           <li class="page-scroll"><a href="#mision_vision" class="btn btn-primary btn-lg">Visión</a></li>
                           <li class="page-scroll"><a href="#contact" class="btn btn-primary btn-lg">Contacto</a></li>
                           
+                          
                           </li>
                         </ul>         
                   </div>

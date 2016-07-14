@@ -33,7 +33,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Ayuda</a></li>
-              <li><a href="#">Salir</a></li>
+              <li><a href="{{url('/clientes')}}">Salir</a></li>
              <li role="separator" class="divider"></li>
             </ul>
           </li>
