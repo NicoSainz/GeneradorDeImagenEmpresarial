@@ -23,17 +23,17 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="{{url('/datosGenerales')}}">Datos Generales</a></li>
-          <li><a href="{{url('/mision_vision')}}">Misión/Vision</a></li>
-          <li><a href="{{url('/productos')}}">Productos</a></li>
-          <li><a href="{{url('/descripcion')}}">Descripción</a></li>
+          <li><a href="{{url('/datosGenerales')}}/{{$clientes->id}}">Datos Generales</a></li>
+          <li><a href="{{url('/mision_vision')}}/{{$clientes->id}}">Misión/Vision</a></li>
+          <li><a href="{{url('/productos')}}/{{$clientes->id}}">Productos</a></li>
+          <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$clientes->nombre}}<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Ayuda</a></li>
-              <li><a href="#">Salir</a></li>
+              <li><a href="{{url('/')}}">Salir</a></li>
              <li role="separator" class="divider"></li>
             </ul>
           </li>
