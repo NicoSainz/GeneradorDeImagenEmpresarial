@@ -27,9 +27,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll">
-                        <a class="btn btn-danger" href="{{url('/clientes')}}">Listado de Clientes</a>
-                    </li>
-                    <li class="page-scroll">
                         <a href="">Registrate</a>
                     </li>
                     <li class="page-scroll">
