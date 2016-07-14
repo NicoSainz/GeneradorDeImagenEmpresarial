@@ -12,20 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
 });
 
+Route::get('/datosGenerales', 'controllerEmpresarial@modificarDatosGenerales');
 
-Route::get('/mision_vision', function () {
-    return view('mision_vision');
-});
+Route::post('/guardarDatosGenerales/{id}','controllerEmpresarial@guardarDatosGenerales');
 
-Route::get('/datosGenerales', function () {
-    return view('datos_generales');
-});
-Route::get('/descripcion', function () {
-    return view('descripcion');
-});
+Route::get('/mision_vision', 'controllerEmpresarial@modificarMisionVision');
+
+Route::post('/guardarMisionVision/{id}','controllerEmpresarial@guardarMisionVision');
+
+Route::get('/descripcion', 'controllerEmpresarial@modificarDescripcion');
+
+Route::post('/guardarDescripcion/{id}','controllerEmpresarial@guardarDescripcion');
+
+
 Route::get('/productos', function () {
     return view('productos');
 });
