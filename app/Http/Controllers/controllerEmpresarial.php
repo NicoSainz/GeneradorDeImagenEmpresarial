@@ -97,5 +97,5 @@ class controllerEmpresarial extends Controller
 
         return view('/datos_generales',compact('clientes'));
     }
-
+    
 }
