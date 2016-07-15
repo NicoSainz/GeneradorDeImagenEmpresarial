@@ -45,3 +45,9 @@ body{
 	padding: 10px 20px;
 	float: right;
 }
+.imgRedonda {
+    width:200px;
+    height:200px;
+    border-radius:150px;
+    border:10px solid #00b2b6;
+}

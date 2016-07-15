@@ -7,7 +7,7 @@
                <section class="success" id="inicio"> 
                 <div class="container">
                 <div class="row">
-                <div class="col-xs-6 .col-md-4">
+                <div class="col-xs-12">
              
 					          <li class="page-scroll">
                     <br>
@@ -32,8 +32,9 @@
                           <li class="page-scroll"><a href="#carousel" class="btn btn-primary btn-lg">Clientes</a></li>
                           <li class="page-scroll" ><a href="#mision_vision"class="btn btn-primary btn-lg">Misión</a></li>
                           <li class="page-scroll"><a href="#mision_vision" class="btn btn-primary btn-lg">Visión</a></li>
-                          <li class="page-scroll"><a href="#contact" class="btn btn-primary btn-lg">Contacto</a></li>
-                          
+                          <li class="page-scroll"><a href="#contact" class="btn btn-primary btn-lg">Escríbenos</a></li>
+                          <li class=""><a href="{{url('/contacto')}}" class="btn btn-primary btn-lg">Contacto</a></li>
+                          <li class=""><a href="{{url('/conocenos')}}" class="btn btn-primary btn-lg">CONOCENOS</a></li>
                           </li>
                         </ul>         
                   </div>
@@ -48,23 +49,21 @@
            
              <section class="success" id="carousel"> 
             <div class="jumbotron" style="background: #00b2b6">
-                 
-
-    <h1 class="display-3" ALIGN=center><FONT FACE="geometr415 blk bt" color="white" SIZE=12 >DESIGNING YOUR WEBSITE</FONT></h1>
-         <h2 class="lead" align="center"><font FACE="geometr415 blk bt" color="white" size="5"> En NEAS podras crear tu sitio web a tu gusto </font></h2>
-
+    
+            <h1 class="display-3" ALIGN=center><FONT FACE="geometr415 blk bt" color="white" SIZE=12 >DESIGNING YOUR WEBSITE</FONT></h1>
+                <h2 class="lead" align="center"><font FACE="geometr415 blk bt" color="white" size="5"> En NEAS podras crear tu sitio web a tu gusto </font></h2>
 
               <link rel="stylesheet" href="estilos.css">
               <link rel="stylesheet" href="fonts.css">
-              <div class="main">
-              <div class="slides">
-              <img src="img/1.jpg">
-              <img src="img/2.jpg">
-              <img src="img/3.jpg">
-              <img src="img/4.jpg">
-              <img src="img/5.jpg">
-              </div>
-              </div>
+                      <div class="main">
+                      <div class="slides">
+                      <img src="img/1.jpg">
+                      <img src="img/2.jpg">
+                      <img src="img/3.jpg">
+                      <img src="img/4.jpg">
+                      <img src="img/5.jpg">
+                      </div>
+                      </div>
 
       <!--carrusel-->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -132,6 +131,8 @@
    </section>
 
 
+        
+
 <!--contacto-->
 
     
@@ -140,10 +141,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2><font color="white">CONTACTO</h2></font>
+                    <h2><font color="white">Contáctate con Nosotros</h2></font>
                     <hr>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <form name="sentMessage" id="contactForm" novalidate>
