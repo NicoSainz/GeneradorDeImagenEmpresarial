@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 11-07-2016 a las 19:14:25
+-- Tiempo de generación: 15-07-2016 a las 07:39:16
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.5.35
 
@@ -30,10 +30,19 @@ CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `correo` varchar(100) NOT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` bigint(11) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `correo`, `telefono`, `updated_at`, `created_at`) VALUES
+(1, 'OXXO', 'oxxo@hotmail.com', 6671123456, '2016-07-14 04:37:28', '0000-00-00 00:00:00'),
+(2, 'JAPAC', 'japac@hotmail.com', 6671654321, '2016-07-14 04:37:28', '0000-00-00 00:00:00'),
+(3, 'COPPEL', 'coppel@hotmail.com', 6671987654, '2016-07-14 04:40:17', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -56,22 +65,22 @@ CREATE TABLE `datosempresa` (
   `dias_trabajados` varchar(100) NOT NULL,
   `dias_descanso` varchar(100) NOT NULL,
   `horario` varchar(150) NOT NULL,
+  `articulo1` varchar(100) NOT NULL,
+  `articulo2` varchar(100) NOT NULL,
+  `servicio1` varchar(100) NOT NULL,
+  `servicio2` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `datosEmpresa_clientes`
+-- Volcado de datos para la tabla `datosempresa`
 --
 
-CREATE TABLE `datosEmpresa_clientes` (
-  `id_datos` int(11) NOT NULL,
-  `id_clientes` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `datosempresa` (`id`, `nombre`, `domicilio`, `mision`, `vision`, `eslogan`, `correo`, `telefono`, `nom_encargado1`, `nom_encargado2`, `nom_encargado3`, `dias_trabajados`, `dias_descanso`, `horario`, `articulo1`, `articulo2`, `servicio1`, `servicio2`, `created_at`, `updated_at`) VALUES
+(1, 'OXXO', 'cada esquina de tu ciudad', 'Ser la mejor Empresa', 'Tener muchos clientes', 'Cajas rapidas', 'oxxo@hotmail.com', 2147483647, '', '', '', '', '', '', 'hola 1', 'hola 2', 'hola 3', 'hola 4', '2016-07-14 18:09:39', '2016-07-15 00:09:39'),
+(2, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '2016-07-14 07:07:50', '0000-00-00 00:00:00'),
+(3, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '2016-07-14 07:08:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -80,67 +89,9 @@ CREATE TABLE `datosEmpresa_clientes` (
 --
 
 CREATE TABLE `login` (
-  `id` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `login_clientes`
---
-
-CREATE TABLE `login_clientes` (
-  `id_cliente` int(11) NOT NULL,
-  `id_login` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `productos`
---
-
-CREATE TABLE `productos` (
-  `id` int(11) NOT NULL,
-  `articulo1` varchar(100) NOT NULL,
-  `articulo2` varchar(100) NOT NULL,
-  `articulo3` varchar(100) NOT NULL,
-  `articulo4` varchar(100) NOT NULL,
-  `articulo5` varchar(100) NOT NULL,
-  `des_articulo1` text NOT NULL,
-  `des_articulo2` text NOT NULL,
-  `des_articulo3` text NOT NULL,
-  `des_articulo4` text NOT NULL,
-  `des_articulo5` text NOT NULL,
-  `servicio1` varchar(100) NOT NULL,
-  `servicio2` varchar(100) NOT NULL,
-  `servicio3` varchar(100) NOT NULL,
-  `servicio4` varchar(100) NOT NULL,
-  `servicio5` varchar(100) NOT NULL,
-  `des_servicio1` text NOT NULL,
-  `des_servicio2` text NOT NULL,
-  `des_servicio3` text NOT NULL,
-  `des_servicio4` text NOT NULL,
-  `des_servicio5` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `productos_clientes`
---
-
-CREATE TABLE `productos_clientes` (
-  `id_ clientes` int(11) NOT NULL,
-  `id_productos` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -165,13 +116,7 @@ ALTER TABLE `datosempresa`
 -- Indices de la tabla `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `productos`
---
-ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_cliente`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -181,22 +126,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `datosempresa`
---
-ALTER TABLE `datosempresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `login`
---
-ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `productos`
---
-ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -22,32 +22,16 @@
                 <a href="{{url('/')}}"><img src="img/logo1.jpg" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS"></a>
 
                 </div>
-
-
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href=""></a>
-                    </li>
-                    
-
-
-                  
-
-                    
-                    
-
-                      
-
                     <li class="page-scroll">
                         <a href="{{url('/registroClientes')}}">Registrate</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="">Iniciar Sesion</a>
+                        <a href="{{url('/iniciarSesion')}}">Iniciar Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -57,9 +41,10 @@
     </nav>
 
 
- 
+
 				@yield('encabezado')
 				<hr>
+
 				@yield('contenido')
                 
 

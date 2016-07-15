@@ -15,19 +15,8 @@ Route::get('/', function () {
     return view('principal');
 });
 
-
-Route::get('/mision_vision', function () {
-    return view('mision_vision');
-});
-
-Route::get('/datosGenerales', function () {
-    return view('datos_generales');
-});
-Route::get('/descripcion', function () {
-    return view('descripcion');
-});
-Route::get('/productos', function () {
-    return view('productos');
+Route::get('/iniciarSesion', function () {
+	return view('/iniciarSesion');
 });
 
 Route::get('/contacto', function () {
@@ -42,3 +31,20 @@ Route::get('/registroClientes', function () {
     return view('registroClientes');
 });
 
+Route::post('/login','controllerEmpresarial@login');
+
+Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
+
+Route::post('/guardarDatosGenerales/{id}','controllerEmpresarial@guardarDatosGenerales');
+
+Route::get('/mision_vision/{id}', 'controllerEmpresarial@misionVision');
+
+Route::post('/guardarMisionVision/{id}','controllerEmpresarial@guardarMisionVision');
+
+Route::get('/productos/{id}', 'controllerEmpresarial@productos');
+
+Route::post('/guardarProductos/{id}','controllerEmpresarial@guardarProductos');
+
+Route::get('/descripcion/{id}', 'controllerEmpresarial@descripcion');
+
+Route::post('/guardarDescripcion/{id}','controllerEmpresarial@guardarDescripcion');
