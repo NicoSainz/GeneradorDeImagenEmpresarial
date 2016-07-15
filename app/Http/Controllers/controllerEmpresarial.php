@@ -36,7 +36,7 @@ class controllerEmpresarial extends Controller
         $datos_empresa->telefono=$request->input('telefono');
         $datos_empresa->save();
 
-        return view('/mision_vision',compact('clientes'));
+        return view('/mision_vision',compact('clientes','datos_empresa'));
     }
 
     public function datosGenerales($id){
@@ -52,14 +52,13 @@ class controllerEmpresarial extends Controller
     }
 
     public function guardarMisionVision(Request $request,$id){
-        dd($request);
         $datos_empresa=datos_empresa::find($id);
         $clientes = clientes::find($id);
         $datos_empresa->mision=$request->input('mision');
         $datos_empresa->vision=$request->input('vision');
         $datos_empresa->save();
 
-        return view('/productos',compact('clientes'));
+        return view('/productos',compact('clientes','datos_empresa'));
     }
 
     public function productos($id){
@@ -77,7 +76,7 @@ class controllerEmpresarial extends Controller
         $datos_empresa->servicio2=$request->input('servicio2');
         $datos_empresa->save();
 
-        return view('/descripcion',compact('clientes'));
+        return view('/descripcion',compact('clientes','datos_empresa'));
     }
 
     public function descripcion($id){
@@ -90,12 +89,12 @@ class controllerEmpresarial extends Controller
         $datos_empresa=datos_empresa::find($id);
         $clientes = clientes::find($id);
         $datos_empresa->nom_encargado1=$request->input('encargado');
-        $datos_empresa->dias_trabajados=$request->input('dias_trabajados');
-        $datos_empresa->dias_descanso=$request->input('dias_descanso');
+        $datos_empresa->dias_trabajados=$request->input('diasTrab');
+        $datos_empresa->dias_descanso=$request->input('diasDesc');
         $datos_empresa->horario=$request->input('horario');
         $datos_empresa->save();
 
-        return view('/datos_generales',compact('clientes'));
+        return view('/datos_generales',compact('clientes','datos_empresa'));
     }
     
 }
