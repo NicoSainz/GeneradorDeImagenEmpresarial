@@ -82,8 +82,20 @@ class controllerEmpresarial extends Controller
 
     public function descripcion($id){
         $clientes=clientes::find($id);
-        return view('/descripcion',compact('clientes'));
+        $datos_empresa = datos_empresa::find($id);
+        return view('/descripcion',compact('clientes','datos_empresa'));
     }
 
+    public function guardarDescripcion(Request $request,$id){
+        $datos_empresa=datos_empresa::find($id);
+        $clientes = clientes::find($id);
+        $datos_empresa->nom_encargado1=$request->input('encargado');
+        $datos_empresa->dias_trabajados=$request->input('dias_trabajados');
+        $datos_empresa->dias_descanso=$request->input('dias_descanso');
+        $datos_empresa->horario=$request->input('horario');
+        $datos_empresa->save();
+
+        return view('/datos_generales',compact('clientes'));
+    }
 
 }

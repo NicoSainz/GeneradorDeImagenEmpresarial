@@ -35,13 +35,4 @@ Route::post('/guardarProductos/{id}','controllerEmpresarial@guardarProductos');
 
 Route::get('/descripcion/{id}', 'controllerEmpresarial@descripcion');
 
-
-
-
-Route::get('/descripcion', function () {
-    return view('descripcion');
-});
-
-Route::get('/productos', function () {
-    return view('productos');
-});
+Route::post('/guardarDescripcion/{id}','controllerEmpresarial@guardarDescripcion');
