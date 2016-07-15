@@ -19,6 +19,18 @@ Route::get('/iniciarSesion', function () {
 	return view('/iniciarSesion');
 });
 
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
+Route::get('/conocenos', function () {
+    return view('conocenos');
+});
+
+Route::get('/registroClientes', function () {
+    return view('registroClientes');
+});
+
 Route::post('/login','controllerEmpresarial@login');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
@@ -51,6 +63,3 @@ Route::get('storage/{archivo}', function ($archivo) {
      abort(404);
  
 });
-
-
-

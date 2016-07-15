@@ -3,7 +3,7 @@
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="img/icono2.ico">
 	<meta charset="UTF-8">
-	<title>NEAS INICIO</title>
+	<title>NEAS </title>
 	<script src="{{ asset("js/jquery.js")}}"></script>
 	<link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -19,7 +19,8 @@
                 </button>
                 
                <div style="position:absolute; left:135px; top:10px; width:728px; height:70px ">       
-               <img src="img/logo1.jpg" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS">
+                <a href="{{url('/')}}"><img src="img/logo1.jpg" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS"></a>
+
                 </div>
             </div>
 
@@ -27,7 +28,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll">
-                        <a href="">Registrate</a>
+                        <a href="{{url('/registroClientes')}}">Registrate</a>
                     </li>
                     <li class="page-scroll">
                         <a href="{{url('/iniciarSesion')}}">Iniciar Sesion</a>
@@ -40,15 +41,12 @@
     </nav>
 
 
- 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-        @yield('encabezado')
-        </div>
-    </div>
-</div>				<hr>
+
+				@yield('encabezado')
+				<hr>
+
 				@yield('contenido')
+                
 
 	<script src="{{ asset("js/bootstrap.js")}}"></script>
 
