@@ -12,7 +12,7 @@
       <div class="panel-heading">Agregar Imagenes</div>
         <div class="panel-body">
           <form method="POST" action="http://localhost/GeneradorDeImagenEmpresarial/public/storage/create" accept-charset="UTF-8" enctype="multipart/form-data">
-            
+            <div class="row">
              <input type="hidden" name="_token" value="{{csrf_token()}}">
             
             <div class="form-group">
@@ -25,9 +25,11 @@
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
                 <hr>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <a href="{{url('/descripcion')}}/{{$clientes->id}}" class="btn btn-primary">Anterior</a>
+                <button type="submit" class="btn btn-primary">Cargar Imagen</button>
               </div>
             </div>
+            </div> 
           </form>
         </div>
       </div>

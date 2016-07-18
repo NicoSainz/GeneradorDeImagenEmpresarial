@@ -44,9 +44,9 @@
 			  <div class="container">
                  	<div class="row" align="center">
                     	<br>
-                        <a href="{{url('/productos')}}/{{$clientes->id}}" class="btn btn-default">Anterior</a>
-                        <input align="center" type="submit" class="btn btn-default" value="Guardar">
-                        <a href="#" class="btn btn-default">Siguiente</a>
+                        <a href="{{url('/productos')}}/{{$clientes->id}}" class="btn btn-primary">Anterior</a>
+                        <input align="center" type="submit" class="btn btn-primary" value="Guardar">
+                        <a href="{{url('imagenes')}}/{{$clientes->id}}" class="btn btn-primary">Siguiente</a>
                     </div>
               </div>
            	</form>

@@ -50,11 +50,11 @@
 				      </div>
 				    </div>
 		
-				    <div class="container">
+				    <div class="form-group">
 				   		<div class="row" align="center">
 				   			<br>
-				   			<input align="center" type="submit" class="btn btn-default" value="Guardar">
-				   			<a href="{{url('/mision_vision')}}/{{$clientes->id}}" class="btn btn-default">Siguiente</a>
+				   			<input align="center" type="submit" class="btn btn-primary" value="Guardar">
+				   			<a href="{{url('/mision_vision')}}/{{$clientes->id}}" class="btn btn-primary">Siguiente</a>
 				   		</div>
 				  	</div>
 				</form>
