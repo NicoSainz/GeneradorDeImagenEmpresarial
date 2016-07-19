@@ -46,7 +46,7 @@
 					</font>
 						
 			             <input id="campo3" name="enviar" type="submit" value="Enviar">
-			             <input id="campo3" name="enviar" type="submit" value="Cancelar"  href="{{url('/registroClientes')}}">
+			             <input id="campo3" name="limpiar" type="submit" value="Limpiar"  href="{{url('/registroClientes')}}">
 					</div>
 				</div>
 			</div>
