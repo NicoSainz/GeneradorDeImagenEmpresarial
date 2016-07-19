@@ -31,9 +31,6 @@ Route::get('/registroClientes', function () {
     return view('registroClientes');
 });
 
-Route::get('/plantilla', function () {
-    return view('/plantilla');
-});
 
 Route::post('/login','controllerEmpresarial@login');
 
