@@ -49,9 +49,11 @@ Route::get('/descripcion/{id}', 'controllerEmpresarial@descripcion');
 
 Route::post('/guardarDescripcion/{id}','controllerEmpresarial@guardarDescripcion');
 
-Route::get('imagenes/{id}', 'StorageController@index');
-Route::post('storage/create', 'StorageController@save');
-Route::get('storage/{archivo}', function ($archivo) {
+Route::get('/imagenes/{id}', 'StorageController@index');
+
+Route::post('/storage/create/{id}', 'StorageController@save');
+
+Route::get('/storage/{archivo}', function ($archivo) {
      $public_path = public_path();
      $url = $public_path.'/storage/'.$archivo;
      //verificamos si el archivo existe y lo retornamos

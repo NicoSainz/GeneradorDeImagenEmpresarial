@@ -27,7 +27,7 @@
           <li><a href="{{url('/mision_vision')}}/{{$clientes->id}}">Misión/Vision</a></li>
           <li><a href="{{url('/productos')}}/{{$clientes->id}}">Productos</a></li>
           <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
-          <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagen</a></li>
+          <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagenes</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">

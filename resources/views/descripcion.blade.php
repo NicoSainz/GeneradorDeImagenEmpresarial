@@ -46,7 +46,7 @@
                     	<br>
                         <a href="{{url('/productos')}}/{{$clientes->id}}" class="btn btn-primary">Anterior</a>
                         <input align="center" type="submit" class="btn btn-primary" value="Guardar">
-                        <a href="{{url('imagenes')}}/{{$clientes->id}}" class="btn btn-primary">Siguiente</a>
+                        <a href="{{url('/imagenes')}}/{{$clientes->id}}" class="btn btn-primary">Siguiente</a>
                     </div>
               </div>
            	</form>
