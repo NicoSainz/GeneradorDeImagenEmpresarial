@@ -4,7 +4,14 @@
 @stop
 
 @section('contenido')
+
+
+
+
+
+
                <section class="success" id="inicio"> 
+                
                 <div class="container">
                 <div class="row">
                 <div class="col-xs-12">
@@ -35,18 +42,16 @@
                           <li class="page-scroll"><a href="#contact" class="btn btn-primary btn-lg">Escríbenos</a></li>
                           <li class=""><a href="{{url('/contacto')}}" class="btn btn-primary btn-lg">Contacto</a></li>
                           <li class=""><a href="{{url('/conocenos')}}" class="btn btn-primary btn-lg">CONOCENOS</a></li>
+                         
                           
                         </ul>         
                   </div>
                 </div>
               </div>
         </section>
+</div>
 
 
-
-
-     
-           
              <section class="success" id="carousel"> 
             <div class="jumbotron" style="background: #00b2b6">
     
