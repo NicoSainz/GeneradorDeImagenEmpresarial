@@ -31,6 +31,7 @@ Route::get('/registroClientes', function () {
     return view('registroClientes');
 });
 
+
 Route::post('/login','controllerEmpresarial@login');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
