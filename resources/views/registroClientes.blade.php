@@ -4,17 +4,18 @@
 @stop
 
 @section('contenido')
-<style type="text/css">
+<style>
 	form{
 		width: 550px;
 	
 		margin: -70px auto;
 		border:1px solid #cacaca;
 	}
+	
 </style>
 
 <div class="jumbotron" style="background: #00b2b6">
-<h1 align="center"><font FACE="geometr415 blk bt" color="white" SIZE=12 > Ingresa tus datos </font></h1>
+<h1 class="3" align="center"><font FACE="geometr415 blk bt" color="white" SIZE=12 > Ingresa tus datos </font></h1>
 	</div>
 	
 		<div class="jumbotron">

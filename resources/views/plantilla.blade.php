@@ -51,17 +51,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Productos</a>
+                        <a href="#portfolio">Productos y Servicios </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Conocenos</a>
+                        <a href="#about">Mision/Vision</a>
                     </li>
+                    
                     <li class="page-scroll">
                         <a href="#contact">Escribenos</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#ubicacion">Contactanos</a>
                     </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -84,9 +86,8 @@
             </div>
         </div>
     </header>
-
-    <!-- seccion producto -->
-    <section id="portfolio">
+<!-- servicios -->
+ <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -95,9 +96,7 @@
                 </div>
             </div>
             <div class="row">
-
-
-                <div class="col-xs-6 portfolio-item">
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -107,7 +106,7 @@
                         <img src="img/cabin.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-xs-6 portfolio-item">
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -117,12 +116,59 @@
                         <img src="img/cake.png" class="img-responsive" alt="">
                     </a>
                 </div>
-               
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/circus.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+
+                <div align="center">
+                <h2>SERVICIOS</h2>
+                    <hr class="star-primary">
+
+
+
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/game.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/safe.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/submarine.png" class="img-responsive" alt="">
+                    </a>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- mision y vision -->
     <section class="success" id="about">
          <div class="jumbotron" style="background: #18bc9c">
     <footer class="text-center">
@@ -270,10 +316,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Articulo 1</h2>
+                            <h2>Producto 1</h2>
                             <hr class="star-primary">
                             <img src="img/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Descripcion ariticulo 1</p>
+                            <p>Descripcion Producto 1</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
@@ -294,10 +340,106 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Articulo 2</h2>
+                            <h2>Producto 2</h2>
                             <hr class="star-primary">
                             <img src="img/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Descripcion ariticulo 2</p>
+                            <p>Descripcion Producto 2</p>
+                           
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Producto 3</h2>
+                            <hr class="star-primary">
+                            <img src="img/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Descripcion Producto 3</p>
+                           
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Servicio 1</h2>
+                            <hr class="star-primary">
+                            <img src="img/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Descripcion Servicio 1</p>
+                           
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Servicio 2</h2>
+                            <hr class="star-primary">
+                            <img src="img/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Descripcion Servicio 2</p>
+                           
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Servicio 3</h2>
+                            <hr class="star-primary">
+                            <img src="img/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Descripcion Servicio 3</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
                         </div>
