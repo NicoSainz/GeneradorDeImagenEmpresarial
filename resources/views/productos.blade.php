@@ -21,7 +21,7 @@
 			        	<input value="{{$datos_empresa->articulo1}}" type="text" class="form-control" name="articulo1" placeholder="articulo #1">
 			        </div>
 			        <div class="col-xs-8">
-			        	<input value="{{$datos_empresa->Darticulo1}}" type="text" class="form-control" name="Darticulo1" placeholder="Descripcion articulo #1">
+			        	<input value="{{$datos_empresa->des_articulo1}}" type="text" class="form-control" name="des_articulo1" placeholder="Descripcion articulo #1">
 			        </div>
 			   	</div>
 
@@ -30,9 +30,18 @@
 			        	<input value="{{$datos_empresa->articulo2}}" type="text" class="form-control" name="articulo2" placeholder="articulo #2">
 			        </div>
 			        <div class="col-xs-8">
-			        	<input value="{{$datos_empresa->Darticulo2}}" type="text" class="form-control" name="Darticulo2" placeholder="Descripcion articulo #2">
+			        	<input value="{{$datos_empresa->des_articulo2}}" type="text" class="form-control" name="des_articulo2" placeholder="Descripcion articulo #2">
 			        </div>
 			   	</div>				
+
+			   	<div class="form-group">
+			    	<div class="col-xs-4">	      
+			        	<input value="{{$datos_empresa->articulo3}}" type="text" class="form-control" name="articulo3" placeholder="articulo #3">
+			        </div>
+			        <div class="col-xs-8">
+			        	<input value="{{$datos_empresa->des_articulo3}}" type="text" class="form-control" name="des_articulo3" placeholder="Descripcion articulo #3">
+			        </div>
+			   	</div>	
 				
 			    <h3>Servicios :</h3>
 			    <div class="form-group">
@@ -40,7 +49,7 @@
 			        	<input value="{{$datos_empresa->servicio1}}" type="text" class="form-control" name="servicio1" placeholder="servicio #1">
 			        </div>
 			        <div class="col-xs-8">
-			        	<input value="{{$datos_empresa->Dservicio1}}" type="text" class="form-control" name="Dservicio1" placeholder="Descripcion servicio #1">
+			        	<input value="{{$datos_empresa->des_servicio1}}" type="text" class="form-control" name="des_servicio1" placeholder="Descripcion servicio #1">
 			        </div>
 			   	</div>
 
@@ -49,7 +58,16 @@
 			        	<input value="{{$datos_empresa->servicio2}}" type="text" class="form-control" name="servicio2" placeholder="servicio #2">
 			        </div>
 			        <div class="col-xs-8">
-			        	<input value="{{$datos_empresa->Dservicio2}}" type="text" class="form-control" name="Dservicio2" placeholder="Descripcion servicio #2">
+			        	<input value="{{$datos_empresa->des_servicio2}}" type="text" class="form-control" name="des_servicio2" placeholder="Descripcion servicio #2">
+			        </div>
+			   	</div>
+
+			   	<div class="form-group">
+			    	<div class="col-xs-4">	      
+			        	<input value="{{$datos_empresa->servicio3}}" type="text" class="form-control" name="servicio3" placeholder="servicio #3">
+			        </div>
+			        <div class="col-xs-8">
+			        	<input value="{{$datos_empresa->des_servicio3}}" type="text" class="form-control" name="des_servicio3" placeholder="Descripcion servicio #3">
 			        </div>
 			   	</div>
 

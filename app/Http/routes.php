@@ -31,6 +31,7 @@ Route::get('/registroClientes', function () {
     return view('registroClientes');
 });
 
+Route::get('/generarPagina/{id}', 'controllerEmpresarial@generarPagina');
 
 Route::post('/login','controllerEmpresarial@login');
 

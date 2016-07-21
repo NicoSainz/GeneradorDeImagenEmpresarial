@@ -71,13 +71,17 @@ class controllerEmpresarial extends Controller
         $datos_empresa=datos_empresa::find($id);
         $clientes = clientes::find($id);
         $datos_empresa->articulo1=$request->input('articulo1');
-        $datos_empresa->Darticulo1=$request->input('Darticulo1');
+        $datos_empresa->des_articulo1=$request->input('des_articulo1');
         $datos_empresa->articulo2=$request->input('articulo2');
-        $datos_empresa->Darticulo2=$request->input('Darticulo2');
+        $datos_empresa->des_articulo2=$request->input('des_articulo2');
+        $datos_empresa->articulo3=$request->input('articulo3');
+        $datos_empresa->des_articulo3=$request->input('des_articulo3');
         $datos_empresa->servicio1=$request->input('servicio1');
-        $datos_empresa->Dservicio1=$request->input('Dservicio1');
+        $datos_empresa->des_servicio1=$request->input('des_servicio1');
         $datos_empresa->servicio2=$request->input('servicio2');
-        $datos_empresa->Dservicio2=$request->input('Dservicio2');
+        $datos_empresa->des_servicio2=$request->input('des_servicio2');
+        $datos_empresa->servicio3=$request->input('servicio3');
+        $datos_empresa->des_servicio3=$request->input('des_servicio3');
         $datos_empresa->save();
 
         return view('/descripcion',compact('clientes','datos_empresa'));
@@ -101,4 +105,9 @@ class controllerEmpresarial extends Controller
         return view('/descripcion',compact('clientes','datos_empresa'));
     }
     
+    public function generarPagina($id){
+        $clientes=clientes::find($id);
+        $datos_empresa = datos_empresa::find($id);
+        return view('/plantilla',compact('clientes','datos_empresa'));
+    }
 }

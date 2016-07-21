@@ -54,16 +54,28 @@ class StorageController extends Controller
       $nombreArt2 = $datos_empresa->articulo2.'.jpg';
       \Storage::disk('local')->put($nombreArt2,  \File::get($fileArt2));
     }
-    //obtenemos el nombre del archivo
+    if ($request->file('articulo3') != null) {
+      $fileArt3 = $request->file('articulo3');
+      $nombreArt3 = $datos_empresa->articulo3.'.jpg';
+      \Storage::disk('local')->put($nombreArt3,  \File::get($fileArt3));
+    }
+    if ($request->file('servicio1') != null) {
+      $fileSer1 = $request->file('servicio1');
+      $nombreSer1 = $datos_empresa->servicio1.'.jpg';
+      \Storage::disk('local')->put($nombreSer1,  \File::get($fileSer1));
+    }
+    if ($request->file('servicio2') != null) {
+      $fileSer2 = $request->file('servicio2');
+      $nombreSer2 = $datos_empresa->servicio2.'.jpg';
+      \Storage::disk('local')->put($nombreSer2,  \File::get($fileSer2));
+    }
+    if ($request->file('servicio3') != null) {
+      $fileSer3 = $request->file('servicio3');
+      $nombreSer3 = $datos_empresa->servicio3.'.jpg';
+      \Storage::disk('local')->put($nombreSer3,  \File::get($fileSer3));
+    }
+
     
-    
-   
-   
-    //indicamos que queremos guardar un nuevo archivo en el disco local
-    
-    
-    
-   
     //return "archivo guardado";
     return view('/datos_generales',compact('clientes','datos_empresa'));
   }

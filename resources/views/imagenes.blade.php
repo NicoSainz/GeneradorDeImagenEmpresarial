@@ -21,6 +21,8 @@
                 <div class="col-md-6">
                   <input type="file" class="form-control" name="Logotipo" >
                 </div>
+                <br><br>
+                <h2>Productos </h2>
               <input type="hidden" name="_token" value="{{csrf_token()}}">
               @if($datos_empresa->articulo1 != null)
               <div class="form-group">
@@ -35,6 +37,41 @@
                 <label class="col-md-4 control-label">{{$datos_empresa->articulo2}}: </label>
                 <div class="col-md-6">
                   <input type="file" class="form-control" name="articulo2" >
+                </div>
+              </div>
+              @endif
+               @if($datos_empresa->articulo3 != null)
+              <div class="form-group">
+                <label class="col-md-4 control-label">{{$datos_empresa->articulo3}}: </label>
+                <div class="col-md-6">
+                  <input type="file" class="form-control" name="articulo3" >
+                </div>
+              </div>
+              @endif
+              <br><br><br><br><br><br>
+                <h2>Servicios </h2>
+
+              @if($datos_empresa->servicio1 != null)
+              <div class="form-group">
+                <label class="col-md-4 control-label">{{$datos_empresa->servicio1}}: </label>
+                <div class="col-md-6">
+                  <input type="file" class="form-control" name="servicio1" >
+                </div>
+              </div>
+              @endif
+              @if($datos_empresa->servicio2 != null)
+              <div class="form-group">
+                <label class="col-md-4 control-label">{{$datos_empresa->servicio2}}: </label>
+                <div class="col-md-6">
+                  <input type="file" class="form-control" name="servicio2" >
+                </div>
+              </div>
+              @endif
+              @if($datos_empresa->servicio3 != null)
+              <div class="form-group">
+                <label class="col-md-4 control-label">{{$datos_empresa->servicio3}}: </label>
+                <div class="col-md-6">
+                  <input type="file" class="form-control" name="servicio3" >
                 </div>
               </div>
               @endif
