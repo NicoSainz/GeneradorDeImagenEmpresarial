@@ -12,8 +12,9 @@ use App\productos;
 
 use App\datos_empresa;
 
-use Illuminate\Support\Facades\Session;
+use DB;
 
+use Illuminate\Support\Facades\Session;
 
 class controllerEmpresarial extends Controller
 {
@@ -110,6 +111,12 @@ class controllerEmpresarial extends Controller
     public function generarPagina($id){
         $clientes=clientes::find($id);
         $datos_empresa = datos_empresa::find($id);
+        shell_exec("rm id.txt");
+        $file = fopen("id.txt", "w");
+        fwrite($file, $id);
+        fclose($file);
+        
+        shell_exec(sprintf('./generaCarpeta.sh  %s %s %s %s %s %s %s %s', $datos_empresa->nombre, $datos_empresa->id, $datos_empresa->articulo1, $datos_empresa->articulo2, $datos_empresa->articulo3, $datos_empresa->servicio1, $datos_empresa->servicio2, $datos_empresa->servicio3));
         return view('/plantilla',compact('clientes','datos_empresa'));
     }
     public function avisoGene($id){
