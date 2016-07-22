@@ -34,6 +34,7 @@ Route::get('/registroClientes', function () {
     return view('registroClientes');
 });
 
+Route::get('/pdfEmpresa/{id}', 'controllerEmpresarial@pdfEmpresa');
 
 Route::post('/login','controllerEmpresarial@login');
 

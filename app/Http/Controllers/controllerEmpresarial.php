@@ -12,6 +12,8 @@ use App\productos;
 
 use App\datos_empresa;
 
+use Illuminate\Support\Facades\Session;
+
 
 class controllerEmpresarial extends Controller
 {
@@ -109,5 +111,15 @@ class controllerEmpresarial extends Controller
         $clientes=clientes::find($id);
         $datos_empresa = datos_empresa::find($id);
         return view('/plantilla',compact('clientes','datos_empresa'));
+    }
+    public function pdfEmpresa($id){
+        
+        $datos_empresa=datos_empresa::find($id);
+        $clientes = clientes::find($id);
+
+        $vista=view('pdfEmpresa', compact('datos_empresa', 'clientes'));
+        $dompdf= \App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream();
     }
 }
