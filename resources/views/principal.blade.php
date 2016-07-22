@@ -37,8 +37,7 @@
 
                           <ul class="nav nav-pills">
                           <li class="page-scroll"><a href="#carousel" class="btn btn-primary btn-lg">Clientes</a></li>
-                          <li class="page-scroll" ><a href="#mision_vision"class="btn btn-primary btn-lg">Misión</a></li>
-                          <li class="page-scroll"><a href="#mision_vision" class="btn btn-primary btn-lg">Visión</a></li>
+                          <li class="page-scroll" ><a href="#mision_vision"class="btn btn-primary btn-lg">Misión/Vision</a></li>
                           <li class="page-scroll"><a href="#contact" class="btn btn-primary btn-lg">Escríbenos</a></li>
                           <li class=""><a href="{{url('/contacto')}}" class="btn btn-primary btn-lg">Contacto</a></li>
                           <li class=""><a href="{{url('/conocenos')}}" class="btn btn-primary btn-lg">CONOCENOS</a></li>

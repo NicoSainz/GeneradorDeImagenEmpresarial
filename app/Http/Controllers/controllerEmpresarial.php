@@ -104,7 +104,7 @@ class controllerEmpresarial extends Controller
         $datos_empresa->horario=$request->input('horario');
         $datos_empresa->save();
 
-        return view('/descripcion',compact('clientes','datos_empresa'));
+        return view('/imagenes',compact('clientes','datos_empresa'));
     }
     
     public function generarPagina($id){

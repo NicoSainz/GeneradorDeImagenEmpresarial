@@ -13,6 +13,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">Agregar Imagenes</div>
         <div class="panel-body">
+          
           <form method="POST" action="{{url('/storage/create')}}/{{$clientes->id}}" accept-charset="UTF-8" enctype="multipart/form-data">
             <div class="row">
               <input type="hidden" name="_token" value="{{csrf_token()}}">
