@@ -274,9 +274,9 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3></h3>
-                        <p></p>
-                        <p></p>
+                        <h3>HORARIOS</h3>
+                        <p>{{$datos_empresa->dias_trabajados}}</p>
+                        <p>{{$datos_empresa->horario}}</p>
                     </div>
                 </div>
             </div>
