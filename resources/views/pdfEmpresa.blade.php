@@ -9,7 +9,7 @@
 	
 	<p align="center"><img src="img/logo1.jpg" WIDTH=360 HEIGHT=100 alt="NEAS"></p>
 	<div class="jumbotron">
-		<h2 align="center">REPORTE EMPRESARIAL</h2>
+		<h2 align="center">CURRICULUM EMPRESARIAL</h2>
 	</div>
 	<table align="center">
 		<thead>

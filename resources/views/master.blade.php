@@ -25,7 +25,7 @@
         <ul class="nav navbar-nav">
           <li><a href="{{url('/datosGenerales')}}/{{$clientes->id}}">Datos Generales</a></li>
           <li><a href="{{url('/mision_vision')}}/{{$clientes->id}}">Misión/Vision</a></li>
-          <li><a href="{{url('/productos')}}/{{$clientes->id}}">Productos/Servicios</a></li>
+          <li><a href="{{url('/productos')}}/{{$clientes->id}}">Articulos/Servicios</a></li>
           <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
           <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagenes</a></li>
         </ul>
