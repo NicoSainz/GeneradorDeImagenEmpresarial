@@ -36,6 +36,8 @@ Route::get('/registroClientes', function () {
 
 Route::get('/pdfEmpresa/{id}', 'controllerEmpresarial@pdfEmpresa');
 
+Route::get('/aviso/{id}','controllerEmpresarial@avisoGene');
+
 Route::post('/login','controllerEmpresarial@login');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');

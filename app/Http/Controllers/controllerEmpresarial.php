@@ -112,6 +112,13 @@ class controllerEmpresarial extends Controller
         $datos_empresa = datos_empresa::find($id);
         return view('/plantilla',compact('clientes','datos_empresa'));
     }
+    public function avisoGene($id){
+        $datos_empresa=datos_empresa::find($id);
+        $clientes = clientes::find($id);
+        
+        return view('/avisoGene',compact('clientes','datos_empresa'));
+    }
+
     public function pdfEmpresa($id){
         
         $datos_empresa=datos_empresa::find($id);
