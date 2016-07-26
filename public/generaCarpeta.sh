@@ -5,7 +5,7 @@ if [ ! -d $DIRECTORIO];then
 mkdir empresas
 fi
 if [ -d $PROYECTO];then
-pwd >> archivo.txt
+#echo $1", "$2", "$3", "$4", "$5", "$6", "$7", "$8 >> archivo.txt
 rm -rf /Applications/XAMPP/xamppfiles/htdocs/empresas/$1
 fi
 /Users/Nicolas/composer.phar create-project laravel/laravel /Applications/XAMPP/xamppfiles/htdocs/empresas/$1

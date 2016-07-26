@@ -51,10 +51,10 @@
     </div>
     <div class="row">
       <div align="center" class="col-xs-12">
-        <h5>--url de la pagina--</h5>
+        <a href="http://localhost/empresas/{{$datos_empresa->nombre}}/public">http://localhost/empresas/{{$datos_empresa->nombre}}/public/</a> 
       </div>
       <div align="center" class="col-xs-12">
-        <a class="btn btn-info" href="">Visita tu pagina</a>
+        <a class="btn btn-info" href="http://localhost/empresas/{{$datos_empresa->nombre}}/public">Visita tu pagina</a>
       </div>
     </div>
   </div>

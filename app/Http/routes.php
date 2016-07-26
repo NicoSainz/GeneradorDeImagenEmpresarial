@@ -36,8 +36,6 @@ Route::get('/registroClientes', function () {
 
 Route::get('/pdfEmpresa/{id}', 'controllerEmpresarial@pdfEmpresa');
 
-Route::get('/aviso/{id}','controllerEmpresarial@avisoGene');
-
 Route::post('/login','controllerEmpresarial@login');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
@@ -57,7 +55,9 @@ Route::get('/descripcion/{id}', 'controllerEmpresarial@descripcion');
 Route::post('/guardarDescripcion/{id}','controllerEmpresarial@guardarDescripcion');
 
 Route::get('imagenes/{id}', 'StorageController@index');
+
 Route::post('storage/create/{id}', 'StorageController@save');
+
 Route::get('storage/{archivo}', function ($archivo) {
      $public_path = public_path();
      $url = $public_path.'/storage/'.$archivo;
@@ -70,3 +70,5 @@ Route::get('storage/{archivo}', function ($archivo) {
      abort(404);
  
 });
+
+Route::get('generarPagina/{id}','controllerEmpresarial@generarPagina');

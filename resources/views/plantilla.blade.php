@@ -96,6 +96,7 @@
                 </div>
             </div>
             <div class="row">
+                @if($datos_empresa->articulo1 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -106,6 +107,8 @@
                         <img src="{{ asset("img/$datos_empresa->articulo1.jpg") }}" class="img-responsive" alt="" width="250" height="700">
                     </a>
                 </div>
+                @endif
+                @if($datos_empresa->articulo2 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -116,6 +119,8 @@
                         <img src="{{ asset("img/$datos_empresa->articulo2.jpg") }}" class="img-responsive" alt="" width="250" height="700">
                     </a>
                 </div>
+                @endif
+                @if($datos_empresa->articulo1 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -126,13 +131,16 @@
                         <img src=""{{ asset("img/$datos_empresa->articulo3.jpg") }}" class="img-responsive" alt="" width="250" height="700">
                     </a>
                 </div>
-
-                <div align="center">
-                <h2>SERVICIOS</h2>
+                @endif
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>SERVICIOS</h2>
                     <hr class="star-primary">
-
-
-
+                </div>
+            </div>
+            <div class="row">
+                @if($datos_empresa->servicio1 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -143,6 +151,8 @@
                         <img src="{{ asset("img/$datos_empresa->servicio1.jpg") }}" class="img-responsive" alt="">
                     </a>
                 </div>
+                @endif
+                @if($datos_empresa->servicio2 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -153,6 +163,8 @@
                         <img src="{{ asset("img/$datos_empresa->servicio2.jpg") }}" class="img-responsive" alt="">
                     </a>
                 </div>
+                @endif
+                @if($datos_empresa->servicio3 != null)
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -163,6 +175,7 @@
                         <img src="{{ asset("img/$datos_empresa->servicio3.jpg") }}" class="img-responsive" alt="">
                     </a>
                 </div>
+                @endif
             </div>
         </div>
         </div>
@@ -315,9 +328,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Producto 1</h2>
+                            <h2>{{$datos_empresa->articulo1}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->articulo1.jpg") }}" class="img-responsive" alt="">
+                            <img src="{{ asset("img/$datos_empresa->articulo1.jpg") }}" class="img-responsive" alt="">
                             <p>{{$datos_empresa->des_articulo1}}</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
@@ -339,9 +352,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Producto 2</h2>
+                            <h2>{{$datos_empresa->articulo2}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->articulo2.jpg") }}" class="img-responsive" alt="">
+                            <img src="{{ asset("img/$datos_empresa->articulo2.jpg") }}" class="img-responsive" alt="">
                             <p>{{$datos_empresa->des_articulo2}}</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
@@ -363,9 +376,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Producto 3</h2>
+                            <h2>{{$datos_empresa->articulo3}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->articulo3.jpg") }}" class="img-responsive" alt="">
+                            <img src="{{ asset("img/$datos_empresa->articulo3.jpg") }}" class="img-responsive" alt="">
                             <p>{{$datos_empresa->des_articulo3}}</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
@@ -387,9 +400,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Servicio 1</h2>
+                            <h2>{{$datos_empresa->servicio1}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->servicio1.jpg") }}" class="img-responsive" alt="">
+                            <img src="{{ asset("img/$datos_empresa->servicio1.jpg") }}" class="img-responsive" alt="">
                             <p>{{$datos_empresa->des_servicio1}}</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
@@ -411,10 +424,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Servicio 2</h2>
+                            <h2>{{$datos_empresa->servicio2}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->servicio2.jpg") }}" class="img-responsive" alt="">
-                            <p>{{$datos_empresa->servicio2}}</p>
+                            <img src="{{ asset("img/$datos_empresa->servicio2.jpg") }}" class="img-responsive" alt="">
+                            <p>{{$datos_empresa->des_servicio2}}</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
                         </div>
@@ -435,10 +448,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Servicio 3</h2>
+                            <h2>{{$datos_empresa->servicio3}}</h2>
                             <hr class="star-primary">
-                            <img src={{ asset("img/$datos_empresa->servicio3.jpg") }}" class="img-responsive" alt="">
-                            <p>{{$datos_empresa->servicio3}}</p>
+                            <img src="{{ asset("img/$datos_empresa->servicio3.jpg") }}" class="img-responsive" alt="">
+                            <p>{{$datos_empresa->des_servicio3}}</p>
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
                         </div>

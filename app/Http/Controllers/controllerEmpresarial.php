@@ -116,14 +116,9 @@ class controllerEmpresarial extends Controller
         fwrite($file, $id);
         fclose($file);
         
-        shell_exec(sprintf('./generaCarpeta.sh  %s %s %s %s %s %s %s %s', $datos_empresa->nombre, $datos_empresa->id, $datos_empresa->articulo1, $datos_empresa->articulo2, $datos_empresa->articulo3, $datos_empresa->servicio1, $datos_empresa->servicio2, $datos_empresa->servicio3));
-        return view('/plantilla',compact('clientes','datos_empresa'));
-    }
-    public function avisoGene($id){
-        $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
-        
-        return view('/avisoGene',compact('clientes','datos_empresa'));
+        $a=shell_exec(sprintf('./generaCarpeta.sh  %s %s %s %s %s %s %s %s', $datos_empresa->nombre, $datos_empresa->id, $datos_empresa->articulo1, $datos_empresa->articulo2, $datos_empresa->articulo3, $datos_empresa->servicio1, $datos_empresa->servicio2, $datos_empresa->servicio3));
+        return view('/avisoGene', compact('datos_empresa','clientes'));
+
     }
 
     public function pdfEmpresa($id){
