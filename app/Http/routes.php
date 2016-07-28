@@ -18,10 +18,6 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::get('/iniciarSesion', function () {
-	return view('/iniciarSesion');
-});
-
 Route::get('/contacto', function () {
     return view('contacto');
 });
@@ -30,13 +26,7 @@ Route::get('/conocenos', function () {
     return view('conocenos');
 });
 
-Route::get('/registroClientes', function () {
-    return view('registroClientes');
-});
-
 Route::get('/pdfEmpresa/{id}', 'controllerEmpresarial@pdfEmpresa');
-
-Route::post('/login','controllerEmpresarial@login');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
 
@@ -72,3 +62,7 @@ Route::get('storage/{archivo}', function ($archivo) {
 });
 
 Route::get('generarPagina/{id}','controllerEmpresarial@generarPagina');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

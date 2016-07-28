@@ -19,16 +19,6 @@ use Illuminate\Support\Facades\Session;
 class controllerEmpresarial extends Controller
 {
 
-    public function login(Request $request){
-        $id = $request->input('nombre_empresa');
-        $clientes=clientes::find($id);
-        $datos_empresa = datos_empresa::find($id);
-
-     //   dd($clientes);
-     //   dd($id);
-        return view('/datos_generales',compact('clientes','datos_empresa'));
-    }
-
     public function guardarDatosGenerales(Request $request,$id){
         $datos_empresa=datos_empresa::find($id);
         $clientes = clientes::find($id);

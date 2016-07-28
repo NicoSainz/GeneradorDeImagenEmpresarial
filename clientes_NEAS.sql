@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-07-2016 a las 07:39:16
+-- Tiempo de generación: 28-07-2016 a las 18:39:55
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.5.35
 
@@ -58,7 +58,7 @@ CREATE TABLE `datosempresa` (
   `vision` text NOT NULL,
   `eslogan` text NOT NULL,
   `correo` varchar(200) NOT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` bigint(11) NOT NULL,
   `nom_encargado1` varchar(200) NOT NULL,
   `nom_encargado2` varchar(200) NOT NULL,
   `nom_encargado3` varchar(200) NOT NULL,
@@ -67,8 +67,16 @@ CREATE TABLE `datosempresa` (
   `horario` varchar(150) NOT NULL,
   `articulo1` varchar(100) NOT NULL,
   `articulo2` varchar(100) NOT NULL,
+  `articulo3` varchar(100) NOT NULL,
+  `des_articulo1` text NOT NULL,
+  `des_articulo2` text NOT NULL,
+  `des_articulo3` text NOT NULL,
   `servicio1` varchar(100) NOT NULL,
   `servicio2` varchar(100) NOT NULL,
+  `servicio3` varchar(100) NOT NULL,
+  `des_servicio1` text NOT NULL,
+  `des_servicio2` text NOT NULL,
+  `des_servicio3` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -77,10 +85,10 @@ CREATE TABLE `datosempresa` (
 -- Volcado de datos para la tabla `datosempresa`
 --
 
-INSERT INTO `datosempresa` (`id`, `nombre`, `domicilio`, `mision`, `vision`, `eslogan`, `correo`, `telefono`, `nom_encargado1`, `nom_encargado2`, `nom_encargado3`, `dias_trabajados`, `dias_descanso`, `horario`, `articulo1`, `articulo2`, `servicio1`, `servicio2`, `created_at`, `updated_at`) VALUES
-(1, 'OXXO', 'cada esquina de tu ciudad', 'Ser la mejor Empresa', 'Tener muchos clientes', 'Cajas rapidas', 'oxxo@hotmail.com', 2147483647, '', '', '', '', '', '', 'hola 1', 'hola 2', 'hola 3', 'hola 4', '2016-07-14 18:09:39', '2016-07-15 00:09:39'),
-(2, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '2016-07-14 07:07:50', '0000-00-00 00:00:00'),
-(3, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '2016-07-14 07:08:25', '0000-00-00 00:00:00');
+INSERT INTO `datosempresa` (`id`, `nombre`, `domicilio`, `mision`, `vision`, `eslogan`, `correo`, `telefono`, `nom_encargado1`, `nom_encargado2`, `nom_encargado3`, `dias_trabajados`, `dias_descanso`, `horario`, `articulo1`, `articulo2`, `articulo3`, `des_articulo1`, `des_articulo2`, `des_articulo3`, `servicio1`, `servicio2`, `servicio3`, `des_servicio1`, `des_servicio2`, `des_servicio3`, `created_at`, `updated_at`) VALUES
+(1, 'OXXO', 'cada esquina de tu ciudad', 'Ser la mejor Empresa', 'Tener muchos clientes', 'Cajas rapidas', 'oxxo@hotmail.com', 2147483647, '', '', '', '', '', '', 'clavo', 'Camion', 'Oso', 'Clavo Hola', 'Camion gola', 'OPso', 'servicio', '', '', 'es uno', '', '', '2016-07-26 17:30:30', '2016-07-27 00:30:30'),
+(2, 'JAPAC', 'Col. Las Vegas', 'Mision', 'Vision', 'agua y salud para todos', 'japac@hotmail.com', 6671111111, 'Alan', '', '', 'Lunes a Viernes', 'Fin de semana', '10-18', 'articulo', '', '', 'Es un Articulo', '', '', 'servicio', '', '', 'Es un Servicio', '', '', '2016-07-28 16:25:35', '2016-07-28 22:25:35'),
+(3, '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2016-07-14 07:08:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 

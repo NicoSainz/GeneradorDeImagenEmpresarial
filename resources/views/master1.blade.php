@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<title>NEAS </title>
 	<script src="{{ asset("js/jquery.js")}}"></script>
-	<link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="fonts/fuentes.css">
+	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset("css/font-awesome.css") }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset("fonts/fuentes.css") }}">
 </head>
 <body >
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -19,7 +19,7 @@
                 </button>
                 
                <div style="position:absolute; left:135px; top:10px; width:728px; height:70px ">       
-                <a href="{{url('/')}}"><img src="img/logo1.jpg" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS"></a>
+                <a href="{{url('/')}}"><img src="{{ asset("img/logo1.jpg") }}" WIDTH=210 HEIGHT=50 ALT="LOGO NEAS"></a>
 
                 </div>
             </div>
@@ -27,12 +27,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll">
-                        <a href="{{url('/registroClientes')}}">Registrate</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="{{url('/iniciarSesion')}}">Iniciar Sesion</a>
-                    </li>
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Iniciar Sesion</a></li>
+                        <li><a href="{{ url('/register') }}">Registrar</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
