@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 
 use App\clientes;
 
+use App\users;
+
 use App\productos;
 
 use App\datos_empresa;
@@ -23,7 +25,7 @@ class StorageController extends Controller
   * @return Response
   */
   public function index($id){
-  	$clientes=clientes::find($id);
+  	$clientes=users::find($id);
     $datos_empresa = datos_empresa::find($id);
     return view('/imagenes',compact('clientes','datos_empresa'));
   }
@@ -35,7 +37,7 @@ class StorageController extends Controller
   */
   public function save(Request $request,$id)
   {
-  	$clientes=clientes::find($id);
+  	$clientes=users::find($id);
     $datos_empresa = datos_empresa::find($id);
 
     //obtenemos el campo file definido en el formulario

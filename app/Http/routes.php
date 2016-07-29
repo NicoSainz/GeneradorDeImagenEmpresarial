@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/envia', function () {
+    return view('/auth/emails/notificacion');
+});
+
 Route::get('/plantilla', function () {
     return view('plantilla');
 });
@@ -27,6 +31,8 @@ Route::get('/conocenos', function () {
 });
 
 Route::get('/pdfEmpresa/{id}', 'controllerEmpresarial@pdfEmpresa');
+
+Route::get('/datosEmpresa','controllerEmpresarial@datosEmpresa');
 
 Route::get('/datosGenerales/{id}','controllerEmpresarial@datosGenerales');
 
@@ -66,3 +72,18 @@ Route::get('generarPagina/{id}','controllerEmpresarial@generarPagina');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('enviar', ['as' => 'enviar', function () {
+
+    $data = ['link' => 'http://styde.net'];
+
+    \Mail::send('auth/passwords/email', $data, function ($message) {
+
+        $message->from('soporte_neas@hotmail.com', 'Soporte NEAS');
+
+        $message->to('nicolas.sainz.pineda@gmail.com')->subject('Notificación NEAS');
+
+    });
+
+    return "Se envío el email";
+}]);

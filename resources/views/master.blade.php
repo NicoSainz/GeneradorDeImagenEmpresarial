@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+  use App\users;
+  use App\datos_empresa;
+
+  $datos_empresa = datos_empresa::find(Auth::user()->id); 
+  if (($datos_empresa) == null) {
+    DB::insert('insert into datosempresa (id) values (?)', [Auth::user()->id]);
+  }
+  $datos_empresa = datos_empresa::find(Auth::user()->id);
+  $clientes = users::find(Auth::user()->id);
+ // dd($clientes);
+?>
 <head>
 	<meta charset="UTF-8">
 	<title>Datos Empresa</title>
@@ -29,16 +41,23 @@
           <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
           <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagenes</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$clientes->nombre}}<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Ayuda</a></li>
-              <li><a href="{{url('/')}}">Salir</a></li>
-             <li role="separator" class="divider"></li>
-            </ul>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+                        
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

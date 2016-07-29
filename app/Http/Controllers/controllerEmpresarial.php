@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\clientes;
 
+use App\users;
+
 use App\productos;
 
 use App\datos_empresa;
@@ -21,7 +23,7 @@ class controllerEmpresarial extends Controller
 
     public function guardarDatosGenerales(Request $request,$id){
         $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
         $datos_empresa->nombre=$request->input('nombre_empresa');
         $datos_empresa->eslogan=$request->input('eslogan');
         $datos_empresa->domicilio=$request->input('direccion');
@@ -32,21 +34,25 @@ class controllerEmpresarial extends Controller
         return view('/mision_vision',compact('clientes','datos_empresa'));
     }
 
+    public function datosEmpresa(){
+        return view('/datosEmpresa');
+    }
+
     public function datosGenerales($id){
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
         $datos_empresa = datos_empresa::find($id);
         return view('/datos_generales',compact('clientes','datos_empresa'));
     }
 
     public function misionVision($id){
-        $clientes=clientes::find($id);
+        $clientes=users::find($id);
         $datos_empresa = datos_empresa::find($id);
         return view('/mision_vision',compact('clientes','datos_empresa'));
     }
 
     public function guardarMisionVision(Request $request,$id){
         $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
         $datos_empresa->mision=$request->input('mision');
         $datos_empresa->vision=$request->input('vision');
         $datos_empresa->save();
@@ -55,14 +61,14 @@ class controllerEmpresarial extends Controller
     }
 
     public function productos($id){
-        $clientes=clientes::find($id);
+        $clientes=users::find($id);
         $datos_empresa = datos_empresa::find($id);
         return view('/productos',compact('clientes','datos_empresa'));
     }
 
     public function guardarProductos(Request $request,$id){
         $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
         $datos_empresa->articulo1=$request->input('articulo1');
         $datos_empresa->des_articulo1=$request->input('des_articulo1');
         $datos_empresa->articulo2=$request->input('articulo2');
@@ -81,14 +87,14 @@ class controllerEmpresarial extends Controller
     }
 
     public function descripcion($id){
-        $clientes=clientes::find($id);
+        $clientes=users::find($id);
         $datos_empresa = datos_empresa::find($id);
         return view('/descripcion',compact('clientes','datos_empresa'));
     }
 
     public function guardarDescripcion(Request $request,$id){
         $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
         $datos_empresa->nom_encargado1=$request->input('encargado');
         $datos_empresa->dias_trabajados=$request->input('diasTrab');
         $datos_empresa->dias_descanso=$request->input('diasDesc');
@@ -99,7 +105,7 @@ class controllerEmpresarial extends Controller
     }
     
     public function generarPagina($id){
-        $clientes=clientes::find($id);
+        $clientes=users::find($id);
         $datos_empresa = datos_empresa::find($id);
         shell_exec("rm id.txt");
         $file = fopen("id.txt", "w");
@@ -114,7 +120,7 @@ class controllerEmpresarial extends Controller
     public function pdfEmpresa($id){
         
         $datos_empresa=datos_empresa::find($id);
-        $clientes = clientes::find($id);
+        $clientes = users::find($id);
 
         $vista=view('pdfEmpresa', compact('datos_empresa', 'clientes'));
         $dompdf= \App::make('dompdf.wrapper');
