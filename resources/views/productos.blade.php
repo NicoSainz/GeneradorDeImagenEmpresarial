@@ -72,7 +72,8 @@
 			   	</div>
 
 			  </fieldset>
-			  	<div class="container">
+			 <h5>*Los nombres de productos o servicios no deben contener espacios</h5>	
+		<div class="container">
                         <div class="row" align="center">
                             <br>
                             <a href="{{url('/mision_vision')}}/{{$clientes->id}}" class="btn btn-primary">Anterior</a>
