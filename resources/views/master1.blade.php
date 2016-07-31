@@ -4,10 +4,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="img/icono2.ico">
 	<meta charset="UTF-8">
 	<title>NEAS </title>
-	<script src="{{ asset("js/jquery.js")}}"></script>
+	<script src="{{ asset("js/jQuery.js")}}"></script>
 	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
   <link rel="stylesheet" type="text/css" href="{{ asset("css/font-awesome.css") }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset("fonts/fuentes.css") }}">
 </head>
 <body >
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">

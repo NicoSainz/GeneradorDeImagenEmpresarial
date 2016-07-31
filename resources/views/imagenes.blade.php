@@ -82,7 +82,8 @@
                 <hr>
                 <a href="{{url('/descripcion')}}/{{$clientes->id}}" class="btn btn-primary">Anterior</a>
                 <button type="submit" class="btn btn-primary">Cargar Imagenes</button>
-              </div>
+                <a href="{{url('/diseño')}}/{{$clientes->id}}" class="btn btn-primary">Siguiente</a>
+	       </div>
             </div>
           </form>
         </div>

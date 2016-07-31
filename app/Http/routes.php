@@ -87,3 +87,7 @@ Route::get('enviar', ['as' => 'enviar', function () {
 
     return "Se envío el email";
 }]);
+
+Route::post('/guardarColor/{id}', 'controllerEmpresarial@guardarColor');
+
+Route::get('/diseño/{id}', 'controllerEmpresarial@diseño');

@@ -128,7 +128,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src=""{{ asset("img/$datos_empresa->articulo3.jpg") }}" class="img-responsive" alt="" width="250" height="700">
+                        <img src="{{ asset("img/$datos_empresa->articulo3.jpg") }}" class="img-responsive" alt="" width="250" height="700">
                     </a>
                 </div>
                 @endif

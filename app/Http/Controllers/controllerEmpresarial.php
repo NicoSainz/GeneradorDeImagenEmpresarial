@@ -111,9 +111,8 @@ class controllerEmpresarial extends Controller
         $file = fopen("id.txt", "w");
         fwrite($file, $id);
         fclose($file);
-        
-        $a=shell_exec(sprintf('./generaCarpeta.sh  %s %s %s %s %s %s %s %s', $datos_empresa->nombre, $datos_empresa->id, $datos_empresa->articulo1, $datos_empresa->articulo2, $datos_empresa->articulo3, $datos_empresa->servicio1, $datos_empresa->servicio2, $datos_empresa->servicio3));
-        return view('/avisoGene', compact('datos_empresa','clientes'));
+	shell_exec(sprintf('./generaCarpeta.sh  %s %s %s %s %s %s %s %s', $datos_empresa->nombre, $datos_empresa->id, $datos_empresa->articulo1, $datos_empresa->articulo2, $datos_empresa->articulo3, $datos_empresa->servicio1, $datos_empresa->servicio2, $datos_empresa->servicio3));
+	return view('/avisoGene', compact('datos_empresa','clientes'));
 
     }
 
@@ -126,5 +125,25 @@ class controllerEmpresarial extends Controller
         $dompdf= \App::make('dompdf.wrapper');
         $dompdf->loadHTML($vista);
         return $dompdf->stream();
+    }
+
+    public function diseño($id){
+        $clientes = users::find($id);
+        $datos_empresa = datos_empresa::find($id);
+        return view('/diseño',compact('clientes','datos_empresa'));
+    }
+
+    public function guardarColor(Request $request, $id){
+        $clientes = users::find($id);
+        $datos_empresa = datos_empresa::find($id);
+        $datos_empresa->color=$request->input('color');
+        $datos_empresa->save();
+  	
+	shell_exec("rm color.txt");
+        $file = fopen("color.txt", "w");
+        fwrite($file, $request->input('color'));
+        fclose($file);
+	      
+        return view('/diseño',compact('clientes','datos_empresa'));
     }
 }

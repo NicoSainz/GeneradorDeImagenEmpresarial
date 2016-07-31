@@ -16,7 +16,8 @@
 	<meta charset="UTF-8">
 	<title>Datos Empresa</title>
   <script src="{{ asset("js/jQuery.js") }}"></script>
-  <link rel="stylesheet" href="{{ asset("css/bootstrap2.css") }}">
+  <link rel="stylesheet" href="{{ asset("css/bootstrap2.css") }}"> 
+  <script type="text/javascript" src="{{ asset("js/jscolor.js") }}"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -40,6 +41,7 @@
           <li><a href="{{url('/productos')}}/{{$clientes->id}}">Articulos/Servicios</a></li>
           <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
           <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagenes</a></li>
+	  <li><a href="{{url('/diseño')}}/{{$clientes->id}}">Diseño</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">

@@ -28,17 +28,25 @@
           <li><a href="{{url('/productos')}}/{{$clientes->id}}">Productos</a></li>
           <li><a href="{{url('/descripcion')}}/{{$clientes->id}}">Descripción</a></li>
           <li><a href="{{url('/imagenes')}}/{{$clientes->id}}">Imagenes</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$clientes->nombre}}<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Ayuda</a></li>
-              <li><a href="{{url('/')}}">Salir</a></li>
-             <li role="separator" class="divider"></li>
-            </ul>
-          </li>
-        </ul>
+          <li><a href="{{url('/diseño')}}/{{$clientes->id}}">Diseño</a></li>
+	</ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+                        
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -51,10 +59,10 @@
     </div>
     <div class="row">
       <div align="center" class="col-xs-12">
-        <a href="http://localhost/empresas/{{$datos_empresa->nombre}}/public">http://localhost/empresas/{{$datos_empresa->nombre}}/public/</a> 
+        <a href="http://empresas.com/{{$datos_empresa->nombre}}/public">http://empresas.com/{{$datos_empresa->nombre}}/public/</a> 
       </div>
       <div align="center" class="col-xs-12">
-        <a class="btn btn-info" href="http://localhost/empresas/{{$datos_empresa->nombre}}/public">Visita tu pagina</a>
+        <a class="btn btn-info" href="http://empresas.com/{{$datos_empresa->nombre}}/public">Visita tu pagina</a>
       </div>
     </div>
   </div>

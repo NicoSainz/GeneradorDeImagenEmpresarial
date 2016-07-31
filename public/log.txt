@@ -1,0 +1,4 @@
+Se recibieron los Parametros: Ley, 2, Mayonesa, Galletas_de_Animalitos, Jamon_Virgina_FUD, Recargas_Tiempo_aire, Pago_de_Servicios, Depositos_Bancarios
+si existia
+/var/www/empresas.com/Ley
+Se creo Carpeta
